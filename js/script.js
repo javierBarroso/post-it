@@ -31,9 +31,6 @@ input.addEventListener('keydown', (e) => {
             note.remove()
         })
 
-        // note.addEventListener('dblclick', () => {
-        //     note.remove()
-        // })
 
     }
 })

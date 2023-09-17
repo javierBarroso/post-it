@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Poppins:wght@100;200;300;500;700;900&display=swap");
 html {
   --note-size: 300px;
-  background: linear-gradient(to right, #292E49, #536976); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, #292E49, #536976);
 }
 
 * {
