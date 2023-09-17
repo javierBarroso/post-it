@@ -18,7 +18,8 @@ input.addEventListener('keydown', (e) => {
         note.classList.add('note')
         note.innerHTML = input.value + '<i class="fa-solid fa-trash"></i>'
         if(i < colores.length - 1){
-            note.style.background = colores[++i]
+            note.style.background = colores[i]
+            ++i
         }else{
             i = 0
         }
