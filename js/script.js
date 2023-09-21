@@ -8,8 +8,26 @@ create.addEventListener('click', () => {
     input.focus()
 })
 
-let colores = ['#FFEB3B', '#FFC0CB', '#4CAF50', '#FF9800', '#2196F3', ' #9C27B0']
+let colores = ['#FFEB3B', '#FFC0CB', '#4CAF50', '#FF9800', '#2196F3', '#9C27B0']
+let randomColor = ['#c2ff3d','#ff3de8','#3dc2ff','#c4e022','#bc83e6','#ebb328'];
+let randomRotation = [5, -2, 8, -6, -2, 1];
 let i = 0
+
+function rotate(){
+    return randomRotation[i];
+}
+
+
+function color(){
+
+    let output = colores[i]
+    
+    i < (colores.length - 1) ? ++i : i = 0
+    
+    return output
+    
+}
+
 
 input.addEventListener('keydown', (e) => {
     let note
@@ -17,12 +35,8 @@ input.addEventListener('keydown', (e) => {
         note = document.createElement('div')
         note.classList.add('note')
         note.innerHTML = input.value + '<i class="fa-solid fa-trash"></i>'
-        if(i < colores.length - 1){
-            note.style.background = colores[i]
-            ++i
-        }else{
-            i = 0
-        }
+        note.style = '--rotate: ' + rotate() + 'deg; background: ' + color() + ';'
+        
 
         input.style.display = 'none'
         input.value = ''
